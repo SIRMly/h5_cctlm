@@ -1,0 +1,116 @@
+@charset "utf-8";
+.page{display: none; background-color: rgba(255,255,255,0.1);}
+#page0{display: block;}
+@-webkit-keyframes fadeIn {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@keyframes fadeIn {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@-webkit-keyframes fadeOut {
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+@keyframes fadeOut {
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+@-webkit-keyframes picRotate {
+    from{-webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);}
+    to{-webkit-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);}
+}
+@keyframes picRotate {
+    from{-webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);}
+    to{-webkit-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);}
+}
+
+.pic{position: absolute; width: 68%; left: 16%; border: 2vw solid #afe2a6; top: 9%; opacity: 0; -webkit-transform-origin: 0 0; -moz-transform-origin: 0 0; -ms-transform-origin: 0 0; -o-transform-origin: 0 0; transform-origin: 0 0;
+    animation:fadeIn 0.8s ease-in 0.1s forwards;
+}
+.word{position: absolute; top: calc(11% + 68vw);opacity: 0;
+    animation:fadeIn 0.8s ease-in 0.8s forwards;
+}
+.bg{width: 100%; height: 100%; opacity: 0; animation: fadeIn 1.5s ease-in 1.6s forwards;}
+
+
+.page1 .pic{animation:fadeIn 0.8s ease-in 0.1s forwards;}
+.fadeIn .word{ opacity: 1;}
+.page1 .word,.page2 .word{width: 50%; left: 25%;}
+.page1 .bg{background: url("../img/bg1.png") no-repeat bottom left; -webkit-background-size: 100% auto; background-size: 100% auto;}
+
+.page.fadeOut .pic{animation: picRotate 0.8s ease-in 0s forwards,fadeOut 1s ease-in 0s forwards;}
+.page.fadeOut .word{animation: fadeOut 0.8s ease-in 0.8s forwards;}
+.page.fadeOut .bg{animation:fadeOut 0.8s ease-in 1.6s forwards;}
+
+
+.page2 .bg{background: url("../img/bg2.png") no-repeat bottom left; -webkit-background-size: 100% auto; background-size: 100% auto;}
+.page3 .bg{background: url("../img/bg3.png") no-repeat bottom left; -webkit-background-size: 100% auto; background-size: 100% auto;}
+.page3 .word{width: 54.6%; left: 22.7%;}
+.page4 .bg{background: url("../img/bg4.png") no-repeat bottom left; -webkit-background-size: 100% auto; background-size: 100% auto;}
+.page4 .word{width: 60%; left: 20%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==横屏==*/
+@-webkit-keyframes rotation {
+    10% { transform: rotate(-90deg); -webkit-transform: rotate(-90deg) }
+    50%, 60% { transform: rotate(0deg); -webkit-transform: rotate(0deg) }
+    90% { transform: rotate(-90deg); -webkit-transform: rotate(-90deg) }
+    100% { transform: rotate(-90deg); -webkit-transform: rotate(-90deg) }
+}
+
+@keyframes rotation {
+    10% {transform: rotate(-90deg); -webkit-transform: rotate(-90deg) }
+    50%, 60% {transform: rotate(0deg); -webkit-transform: rotate(0deg)}
+    90% { transform: rotate(-90deg); -webkit-transform: rotate(-90deg) }
+    100% {transform: rotate(-90deg); -webkit-transform: rotate(-90deg) }
+}
+
+#orientLayer { display: none }
+@media screen and (min-aspect-ratio: 12/9) {
+    #orientLayer { display: block }
+}
+.mod-orient-layer { display: none; position: fixed; height: 100%; width: 100%; left: 0; top: 0; right: 0; bottom: 0; background: #000; z-index: 9997 }
+.mod-orient-layer__content { position: absolute; width: 100%; top: 45%; margin-top: -75px; text-align: center }
+.mod-orient-layer__icon-orient { background-image: url('../img/crossWarning.png'); display: inline-block; width: 67px; height: 109px; transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg); -webkit-animation: rotation infinite 1.5s ease-in-out; animation: rotation infinite 1.5s ease-in-out;
+    -webkit-background-size: 67px; background-size: 67px }
+.mod-orient-layer__desc { margin-top: 20px; font-size: 15px; color: #fff }
+
+
+

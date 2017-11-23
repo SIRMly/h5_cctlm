@@ -13,24 +13,93 @@
     <title>安仁乐道</title>
 </head>
 <body>
-<!--<audio src="audio/tourBgm.mp3" loop preload="auto" id="bgm"></audio>-->
+<audio src="audio/bgm.mp3" loop preload="auto" id="bgm"></audio>
+
+<div class="page page11" id="page11">
+    <div class="page11-border"></div>
+</div>
+<div class="page page10" id="page10">
+    <div class="blank10">
+        <img src="img/code1.png" alt="" class="code1"/>
+        <img src="img/code2.png" alt="" class="code2"/>
+    </div>
+</div>
+<div class="page page9" id="page9">
+    <div class="bg"></div>
+    <div class="pic">
+        <img src="img/pic9.png" alt=""/>
+        <div class="border"></div>
+    </div>
+    <img src="img/word9.png" alt="" class="word"/>
+</div>
+<div class="page page8" id="page8">
+    <div class="bg"></div>
+    <div class="pic">
+        <img src="img/pic8.png" alt=""/>
+        <div class="border borderB"></div>
+        <div class="pic8-icon"></div>
+    </div>
+    <img src="img/word8.png" alt="" class="word"/>
+</div>
+<div class="page page7" id="page7">
+    <div class="bg"></div>
+    <div class="pic">
+        <img src="img/pic7.png" alt=""/>
+        <div class="border borderB"></div>
+    </div>
+    <img src="img/word7.png" alt="" class="word"/>
+</div>
+<div class="page page6" id="page6">
+    <div class="bg"></div>
+    <div class="pic">
+        <img src="img/pic6.png" alt=""/>
+        <div class="border borderB"></div>
+    </div>
+    <img src="img/word6.png" alt="" class="word"/>
+</div>
+<div class="page page5" id="page5">
+    <div class="bg"></div>
+    <div class="pic">
+        <img src="img/pic5.png" alt=""/>
+        <div class="border borderB"></div>
+    </div>
+    <img src="img/word5.png" alt="" class="word"/>
+</div>
+<div class="page page4" id="page4">
+    <div class="bg"></div>
+    <div class="pic">
+        <img src="img/pic4.png" alt=""/>
+        <div class="border"></div>
+    </div>
+    <img src="img/word4.png" alt="" class="word"/>
+</div>
 <div class="page page3" id="page3">
     <div class="bg"></div>
-    <img src="img/pic3.png" alt="" class="pic"/>
+    <div class="pic">
+        <img src="img/pic3.png" alt=""/>
+        <div class="border"></div>
+    </div>
     <img src="img/word3.png" alt="" class="word"/>
 </div>
 <div class="page page2" id="page2">
     <div class="bg"></div>
-    <img src="img/pic2.png" alt="" class="pic"/>
+    <div class="pic">
+        <img src="img/pic2.png" alt=""/>
+        <div class="border"></div>
+    </div>
     <img src="img/word2.png" alt="" class="word"/>
 </div>
 <div class="page page1" id="page1">
     <div class="bg"></div>
-    <img src="img/pic1.png" alt="" class="pic"/>
+    <div class="pic">
+        <img src="img/pic1.png" alt=""/>
+        <div class="border"></div>
+    </div>
     <img src="img/word1.png" alt="" class="word"/>
 </div>
 <div class="page" id="page0">
     <div id="progress"></div>
+    <img src="img/loading.gif" alt=""/>
 </div>
 <div class="music"></div>
 <div id="orientLayer" class="mod-orient-layer">
@@ -49,23 +118,44 @@
         });
         document.addEventListener("WeixinJSBridgeReady", function () {
         }, false);
-//        var bgm = document.getElementById("bgm");
+        var bgm = document.getElementById("bgm");
         var imgs = [
                 "img/pic1.png",
-                "img/word1.png",
-                "img/bg1.png",
                 "img/pic2.png",
-                "img/word2.png",
-                "img/bg2.png",
                 "img/pic3.png",
-                "img/word3.png",
-                "img/bg3.png",
                 "img/pic4.png",
+                "img/pic5.png",
+                "img/pic6.png",
+                "img/pic7.png",
+                "img/pic8.png",
+                "img/pic9.png",
+                "img/word1.png",
+                "img/word2.png",
+                "img/word3.png",
                 "img/word4.png",
-                "img/bg4.png"
+                "img/word5.png",
+                "img/word6.png",
+                "img/word7.png",
+                "img/word8.png",
+                "img/word9.png",
+                "img/word10.png",
+                "img/bg1.png",
+                "img/bg2.png",
+                "img/bg3.png",
+                "img/bg4.png",
+                "img/bg5.png",
+                "img/bg6.png",
+                "img/bg7.png",
+                "img/bg8.png",
+                "img/bg9.png",
+                "img/bg10.png",
+                "img/bg11.png",
+                "img/code1.png",
+                "img/code2.png",
+                "img/icon8.png",
         ];
         preload(imgs);
-        function preload(imgs,proBox){
+        function preload(imgs){
             var proNum = 0,
                     count = imgs.length,
                     proPercentage = 0;
@@ -75,23 +165,22 @@
                 newImg.onload = function (){
                     proNum++;
                     proPercentage = Math.floor(proNum/count*100);
-                    $("#progress").width(proPercentage+"%");
+                    $("#progress").html(proPercentage+"%");
                     if(proNum>=count){
                         proPercentage=100;
                         $("#page0").stop().fadeOut(500, function (){
                             $("#page0").addClass("hide");
                         });
                         $("#page1").stop().fadeIn(500);
-//                        setTimeout(function(){
+                        setTimeout(toNext,2500);
+                        setTimeout(function(){
 //                            $(".music").addClass("play");
 //                            bgm.play();
 //                            WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
 //                                bgm.play();
 //                            });
-//                        },100)
-                        setTimeout(toNext(1),2500);
+                        },100)
                     }
-//                    proBox.html(proPercentage+"%");
                 }
             }
         }
@@ -106,27 +195,40 @@
 //        });
 
 
-        var nowIndex = 1;
-        function toNext(index){
-            if(nowIndex == index){
-                touch.on("#page"+index, "swipeup", function (){
-                    console.log(index);
-                    nextPage(index, index+1);
+        var canPlay = true;
+        function toNext() {
+            $(".page").each(function (index, item){
+                touch.on("#page" + index, "swipeleft", function () {
+                    if (canPlay) {
+                        nextPage(index, index + 1);
+                        canPlay = false;
+                        setTimeout(function () {
+                            toNext();
+                        }, 2500);
+                    }else{
+                        console.log(canPlay);
+                    }
                 });
-            }
+
+
+            });
 
         }
         function nextPage(thisPage, nextPage) {
-            if(thisPage < 11 && thisPage > 0){
+            if(thisPage < 9 && thisPage > 0){
                 $("#page"+thisPage).find("img,div").css("opacity",1);
                 $("#page"+thisPage).addClass("fadeOut");
-                $("#page"+nextPage).stop().fadeIn(200, function (){
-                    setTimeout(function (){
-                        $("#page"+thisPage).fadeOut(0);
-                        nowIndex++;
-                        toNext(nextPage);
-                    }, 2500);
-                });
+                $("#page"+nextPage).stop().fadeIn(200);
+                setTimeout(function (){
+                    $("#page"+thisPage).fadeOut(0);
+                    canPlay = true;
+                }, 2300)
+            }else if(thisPage < 11){
+                $("#page"+thisPage).stop().fadeOut(800);
+                $("#page"+nextPage).stop().fadeIn(900);
+                setTimeout(function (){
+                    canPlay = true;
+                }, 200)
             }
         }
 

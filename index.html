@@ -16,13 +16,14 @@
 <audio src="audio/bgm.mp3" loop preload="auto" id="bgm"></audio>
 
 <div class="page page11" id="page11">
-    <div class="page11-border"></div>
-</div>
-<div class="page page10" id="page10">
-    <div class="blank10">
+
+    <div class="blank11">
         <img src="img/code1.png" alt="" class="code1"/>
         <img src="img/code2.png" alt="" class="code2"/>
     </div>
+</div>
+<div class="page page10" id="page10">
+    <div class="page10-border"></div>
 </div>
 <div class="page page9" id="page9">
     <div class="bg"></div>
@@ -174,7 +175,7 @@
                             $("#page0").addClass("hide");
                         });
                         $("#page1").stop().fadeIn(500);
-                        setTimeout(toNext,2500);
+                        setTimeout(toNext,1200);
                         setTimeout(function(){
                             $(".music").addClass("play");
                             bgm.play();
@@ -206,7 +207,7 @@
                         canPlay = false;
                         setTimeout(function () {
                             toNext();
-                        }, 2500);
+                        }, 1200);
                     }else{
                         console.log(canPlay);
                     }
@@ -224,7 +225,7 @@
                 setTimeout(function (){
                     $("#page"+thisPage).fadeOut(0);
                     canPlay = true;
-                }, 2300)
+                }, 1100);
             }else if(thisPage < 11){
                 $("#page"+thisPage).stop().fadeOut(800);
                 $("#page"+nextPage).stop().fadeIn(900);

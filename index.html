@@ -33,12 +33,12 @@
     <img src="img/word9.png" alt="" class="word"/>
 </div>
 <div class="page page8" id="page8">
-    <div class="bg"></div>
     <div class="pic">
         <img src="img/pic8.png" alt=""/>
         <div class="border borderB"></div>
         <div class="pic8-icon"></div>
     </div>
+    <div class="bg"></div>
     <img src="img/word8.png" alt="" class="word"/>
 </div>
 <div class="page page7" id="page7">
@@ -58,7 +58,9 @@
     <img src="img/word6.png" alt="" class="word"/>
 </div>
 <div class="page page5" id="page5">
-    <div class="bg"></div>
+    <div class="bg">
+        <p>牛宏超摄</p>
+    </div>
     <div class="pic">
         <img src="img/pic5.png" alt=""/>
         <div class="border borderB"></div>
@@ -171,14 +173,14 @@
                         $("#page0").stop().fadeOut(500, function (){
                             $("#page0").addClass("hide");
                         });
-                        $("#page1").stop().fadeIn(500);
+                        $("#page8").stop().fadeIn(500);
                         setTimeout(toNext,2500);
                         setTimeout(function(){
-//                            $(".music").addClass("play");
-//                            bgm.play();
-//                            WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
-//                                bgm.play();
-//                            });
+                            $(".music").addClass("play");
+                            bgm.play();
+                            WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+                                bgm.play();
+                            });
                         },100)
                     }
                 }

@@ -66,13 +66,14 @@
 .page4 .bg{background: url("../img/bg4.png") no-repeat bottom left; -webkit-background-size: 100% auto; background-size: 100% auto;}
 .page4 .word{width: 60%; left: 20%;}
 .page5 .bg{background: url("../img/bg5.png") no-repeat bottom left; -webkit-background-size: 100% auto; background-size: 100% auto;}
+.page5 .bg p{font-size: 0.55rem; color: #121212;position: absolute;right: 17%; top: calc(9% - 1rem);}
 .page5 .word{width: 69%; left: 16.5%;}
 .page6 .bg{background: url("../img/bg6.png") no-repeat bottom left; -webkit-background-size: 100% auto; background-size: 100% auto;}
 .page6 .word{width: 65%; left: 16.5%;}
 .page7 .bg{background: url("../img/bg7.png") no-repeat bottom left; -webkit-background-size: 100% auto; background-size: 100% auto;}
 .page7 .word{width: 60%; left: 16.5%;}
 .page8 .bg{background: url("../img/bg8.png") no-repeat bottom left; -webkit-background-size: 100% auto; background-size: 100% auto;}
-.page8 .word{width: 74%; left: 16.5%;}
+.page8 .word{width: 74%; left: 16.5%; top: auto; bottom: 9.5%;}
 .page8 .pic8-icon{width: 12.6vw; height: 12.6vw; background: url("../img/icon8.png") no-repeat center center;-webkit-background-size: contain; background-size: contain; position: absolute; right: -8vw; top: -6vw; border: none;}
 .page9 .bg{background: url("../img/bg9.png") no-repeat bottom left; -webkit-background-size: 100% auto; background-size: 100% auto;}
 .page9 .word{width: 70%; left: 15%;}

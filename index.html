@@ -16,26 +16,25 @@
 <audio src="audio/bgm.mp3" loop preload="auto" id="bgm"></audio>
 
 <div class="page page11" id="page11">
-
     <div class="blank11">
         <img src="img/code1.png" alt="" class="code1"/>
         <img src="img/code2.png" alt="" class="code2"/>
     </div>
 </div>
 <div class="page page10" id="page10">
-    <div class="page10-border"></div>
+    <img class="page10-word" src="img/page10-word.png" alt=""/>
 </div>
 <div class="page page9" id="page9">
     <div class="bg"></div>
     <div class="pic">
-        <img src="img/pic9.png" alt=""/>
+        <img src="img/pic9.gif" alt=""/>
         <div class="border"></div>
     </div>
     <img src="img/word9.png" alt="" class="word"/>
 </div>
 <div class="page page8" id="page8">
     <div class="pic">
-        <img src="img/pic8.png" alt=""/>
+        <img src="img/pic8.gif" alt=""/>
         <div class="border borderB"></div>
         <div class="pic8-icon"></div>
     </div>
@@ -45,7 +44,7 @@
 <div class="page page7" id="page7">
     <div class="bg"></div>
     <div class="pic">
-        <img src="img/pic7.png" alt=""/>
+        <img src="img/pic7.gif" alt=""/>
         <div class="border borderB"></div>
     </div>
     <img src="img/word7.png" alt="" class="word"/>
@@ -53,17 +52,17 @@
 <div class="page page6" id="page6">
     <div class="bg"></div>
     <div class="pic">
-        <img src="img/pic6.png" alt=""/>
+        <img src="img/pic6.gif" alt=""/>
         <div class="border borderB"></div>
     </div>
     <img src="img/word6.png" alt="" class="word"/>
 </div>
 <div class="page page5" id="page5">
     <div class="bg">
-        <p>牛宏超摄</p>
+        <!--<p>牛宏超摄</p>-->
     </div>
     <div class="pic">
-        <img src="img/pic5.png" alt=""/>
+        <img src="img/pic5.gif" alt=""/>
         <div class="border borderB"></div>
     </div>
     <img src="img/word5.png" alt="" class="word"/>
@@ -71,7 +70,7 @@
 <div class="page page4" id="page4">
     <div class="bg"></div>
     <div class="pic">
-        <img src="img/pic4.png" alt=""/>
+        <img src="img/pic4.gif" alt=""/>
         <div class="border"></div>
     </div>
     <img src="img/word4.png" alt="" class="word"/>
@@ -126,12 +125,12 @@
                 "img/pic1.png",
                 "img/pic2.png",
                 "img/pic3.png",
-                "img/pic4.png",
-                "img/pic5.png",
-                "img/pic6.png",
-                "img/pic7.png",
-                "img/pic8.png",
-                "img/pic9.png",
+                "img/pic4.gif",
+                "img/pic5.gif",
+                "img/pic6.gif",
+                "img/pic7.gif",
+                "img/pic8.gif",
+                "img/pic9.gif",
                 "img/word1.png",
                 "img/word2.png",
                 "img/word3.png",
@@ -142,6 +141,7 @@
                 "img/word8.png",
                 "img/word9.png",
                 "img/word10.png",
+                "img/page10-word.png",
                 "img/bg1.png",
                 "img/bg2.png",
                 "img/bg3.png",
@@ -196,8 +196,6 @@
 //                $(".music").removeClass("play");
 //            }
 //        });
-
-
         var canPlay = true;
         function toNext() {
             $(".page").each(function (index, item){
@@ -234,10 +232,6 @@
                 }, 200)
             }
         }
-
-
-
-
     })(jQuery);
 </script>
 </body>
